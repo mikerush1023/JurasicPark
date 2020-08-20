@@ -215,15 +215,22 @@ namespace JurasicPark
                             Console.WriteLine($"There is no dinosaur named {answer}");
                         }
                     }
-
-
-                    // Name - string
-                    // DietType - string either carnivore or herbivore
-                    // WhenAcquired - supplied by the code
-                    // Weight - int represented in pounds
-                    // EnclosureNumber - string
-                    // Quit the app
                 }
+                if (choice == "SUMMARY")
+                {
+                    var HerbivoreCount = dinosaurs.Count(dinosaur => dinosaur.DietType == ("Herbivore"));
+                    var CarnivoreCount = dinosaurs.Count(dinosaur => dinosaur.DietType == ("Carnivore"));
+                    Console.WriteLine($"There are {HerbivoreCount} herbivores and {CarnivoreCount} carnivores in the park");
+                }
+
+
+                // Name - string
+                // DietType - string either carnivore or herbivore
+                // WhenAcquired - supplied by the code
+                // Weight - int represented in pounds
+                // EnclosureNumber - string
+                // Quit the app
             }
         }
     }
+}
